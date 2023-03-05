@@ -1,0 +1,23 @@
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    padding: 8px 14px;
+    margin-top: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    
+   
+    a {   
+        min-width:130px ;
+        display: block;      
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+}
+ 
+.dropdown-show {  display: block;  }
+ 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Images</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Images</h2>
+        <p class=" ">Images are very important to beautify as well as to depict many complex concepts in simple way on your web page.</p>
+        <hr class="mt-1">
+    </div>     
+
+    <div class="container mb-5">
+        <div class="row bg-primary-light  mt-2 p-1 br-sm ">
+            <h4 class="ml-1 mr-1">Responsive images</h4> 
+            <p class="ml-1 mr-1">Apply max-width: 100%; and height: auto; with the <code>image</code> class so that images can scale with the parent element.</p>
+
+            <div class="col-xs-12 p-1 mt-1">
+                <img src="imgs/wall.jpg" alt="" class="image">
+            </div>
+
+            <div class="col-xs-12 p-1">
+                <pre>
+                    <code class="bg-white border-gray">
+ &lt;img src=&quot;....&quot; alt=&quot;....&quot; class=&quot;image&quot;&gt;
+                    </code>
+                </pre>    
+            </div>
+        </div>
+
+        <div class="row bg-primary-light  mt-2 p-1 br-sm ">
+            <h4 class="ml-1 mr-1">Thumnbails</h4> 
+            <p class="ml-1 mr-1">Use the <code>thumnbail</code> class give a max height and width of 200px.</p>
+
+            <div class="col-xs-12 p-1 mt-1">
+                <img src="imgs/wall.jpg" alt="" class="thumbnail">
+            </div>
+
+            <div class="col-xs-12 p-1">
+                <pre>
+                    <code class="bg-white border-gray">
+ &lt;img src=&quot;....&quot; alt=&quot;....&quot; class=&quot;thumbnail&quot;&gt;
+                    </code>
+                </pre>    
+            </div>
+        </div>
+
+        <div class="row bg-primary-light mt-2 p-1 br-t-sm ">
+            <h4 class="ml-1 mr-1">Customization</h4> 
+            <p class="ml-1 mr-1">Use <code>border</code> and <code>br</code> classes to customize your images.</p>
+        </div>
+
+        <div class="row display-f bg-primary-light p-1 br-b-sm ">
+            <div class="col-xs-12 col-sm-6 col-md-3 p-1  display-f justify-center align-center ">
+                <img src="imgs/wall.jpg" alt="" class="thumbnail border-black">
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 p-1  display-f justify-center align-center ">
+                <img src="imgs/wall.jpg" alt="" class="thumbnail border-lg-l-blue br-r-md">
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 p-1  display-f justify-center align-center ">
+                <img src="imgs/wall.jpg" alt="" class="thumbnail border-lg-secondary br-md">
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 p-1  display-f justify-center align-center ">
+                <img src="imgs/wall.jpg" alt="" class="thumbnail br-full">
+            </div>
+
+            <div class="col-xs-12 p-1">
+                <pre>
+                    <code class="bg-white border-gray">
+&lt;div class=&quot;col-*&quot;&gt;
+    &lt;img src=&quot;....&quot; alt=&quot;....&quot; class=&quot;thumbnail border-black&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-*&quot;&gt;
+    &lt;img src=&quot;....&quot; alt=&quot;....&quot; class=&quot;thumbnail border-lg-l-blue br-r-md&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-*&quot;&gt;
+    &lt;img src=&quot;....&quot; alt=&quot;....&quot; class=&quot;thumbnail border-lg-secondary br-md&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-*&quot;&gt;
+    &lt;img src=&quot;....&quot; alt=&quot;....&quot; class=&quot;thumbnail br-full&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>    
+            </div>
+        </div>
+
+    </div>
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

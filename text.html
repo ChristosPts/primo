@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Text</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Text</h2>
+        <p class=" ">Text classes for colors, alignments, sizes and weights.</p>
+        <hr class="mt-1">
+    </div>
+
+    <div class="container mb-5">
+        <div class="row mt-2 bg-primary-light min-vh-3 p-1 br-t-sm">
+            <h4 class="ml-1 mr-1">Text colors.</h4> 
+            <p class="ml-1 mr-1">All of the predefined color classes can be used for text with <code>text-{color}*</code>.</p>
+            <p class="ml-1 mr-1">Bellow are a few examples.</p>
+
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <p class="text-blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</p>     
+                <p class="text-blue-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</p>     
+                <p class="text-blue-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</p>     
+                <div class="text-info-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</div>     
+                <div class="text-purple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</div>        
+                <h6 class="text-green-light fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</h6>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;p class=&quot;text-blue&quot;&gt;&lt;/p&gt;
+&lt;p class=&quot;text-blue-dark&quot;&gt;&lt;/p&gt; 
+&lt;p class=&quot;text-blue-light&quot;&gt;&lt;/p&gt; 
+&lt;div class=&quot;text-info-dark&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;text-purple&quot;&gt;&lt;/div&gt; 
+&lt;h6 class=&quot;text-green-light&quot;&gt;&lt;/h6&gt;   
+                </code>
+                </pre>
+            </div>        
+        </div>
+
+        <div class="row bg-primary-light min-vh-3 p-1 br-b-sm">
+            <h4 class="ml-1 mr-1">Text Hover.</h4> 
+            <p class="ml-1 mr-1">Use <code>text-hover-{color}*</code> to chane the color of the text on hover (doesn't work with dark or light classes).</p>
+
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <p class="text-hover-info-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</p>     
+                <p class="text-hover-blue-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</p>     
+                <p class="text-hover-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</p>     
+                <div class="text-hover-yellow-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</div>     
+                <h6 class="text-hover-purple fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nisi aliquam fugit?</h6>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;h6 class=&quot;text-hover-purple&quot;&gt;&lt;/h6&gt;   
+&lt;p class=&quot;text-hover-info-dark&quot;&gt;&lt;/p&gt;
+&lt;p class=&quot;text-hover-blue-light&quot;&gt;&lt;/p&gt; 
+&lt;p class=&quot;text-hover-red-dark&quot;&gt;&lt;/p&gt; 
+&lt;div class=&quot;text-hover-yellow-dark&quot;&gt;&lt;/div&gt; 
+                </code>
+                </pre>
+            </div>        
+        </div>
+
+
+
+        <div class="row mt-2 bg-primary-light min-vh-3 p-1 br-sm">
+            <h4 class="ml-1 mr-1">Font weights</h4> 
+            <p class="ml-1 mr-1">Use <code>fw-*</code> classes to change font weight.</p>
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <div class="fw-bold">Bold text.</div>
+                <div class="fw-bolder">Bolder text (relative to the parent element).</div>
+                <div class="fw-bolder">Normal text.</div>
+                <div class="fw-light">Light text.</div>
+                <div class="fw-lighter">Lighter text (relative to the parent element).</div>
+                <h6>Headers have a predefined bold weight</h6>
+                <h6 class="fw-light">Use <code>fw-light*</code> or <code>fw-normal</code> classes to change their weight.</h6>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;div class=&quot;fw-bold&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;fw-bolder&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;fw-normal&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;fw-light&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;fw-lighter&quot;&gt;&lt;/div&gt; 
+&lt;h6 class=&quot; &quot;&gt;&lt;/h6&gt; 
+&lt;h6 class=&quot;fw-light&quot;&gt;&lt;/h6&gt;
+                </code>
+                </pre>
+            </div>        
+        </div>
+
+        <div class="row mt-2 bg-primary-light min-vh-3 p-1 br-sm">
+            <h4 class="ml-1 mr-1">Text transform</h4> 
+            <p class="ml-1 mr-1">The text transform property specifies how to capitalize an element's text. See how these classes change the following text:</p>
+            <p class="ml-1 mr-1 text-info-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi ab qui.</p>
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <div class="text-low">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi ab qui.</div>
+                <div class="text-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi ab qui.</div>
+                <div class="text-capital">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi ab qui.</div>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;div class=&quot;text-low&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;text-up&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;text-capital&quot;&gt;&lt;/div&gt; 
+                </code>
+                </pre>
+            </div>        
+        </div>
+       
+        <div class="row mt-2 bg-primary-light min-vh-3 p-1  br-sm">
+            <h4 class="ml-1 mr-1">Font sizes</h4> 
+            <p class="ml-1 mr-1">There are 5 font sizes with the default font size (<code>font-size-mb</code>) being 16px.</p>
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <div class="font-size-sm">font-size-sm has a size of 12px</div>
+                <div class="font-size-md">font-size-md has a size of 16px</div>
+                <div class="">If a font-size-* isn't assigned then text will have a default font size of 16px</div>
+                <div class="font-size-lg">font-size-lg has a size of 24px</div>
+                <div class="font-size-xl">font-size-xl has a size of 32px</div>
+                <div class="font-size-xxl">font-size-xxl has a size of 48px</div>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;div class=&quot;font-size-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;font-size-md&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot; &quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;font-size-lg&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;font-size-xl&quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;font-size-xxl&quot;&gt;&lt;/div&gt; 
+                </code>
+                </pre>
+            </div>        
+        </div>    
+
+        <div class="row mt-2 bg-primary-light min-vh-3 p-1  br-sm">
+            <h4 class="ml-1 mr-1">Headings</h4> 
+            <p class="ml-1 mr-1">All 6 headings are available as tags or classes. The heading tags are also bolder than the classes.</p>
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <h1>h1 tags have a size of 46px</h1>
+                <div class="h1">h1 classes have a size of 46px</div>
+                
+                <h2>h2 tags have a size of 40px</h2>
+                <div class="h2">h2 classes have a size of 40px</div>
+                
+                <h3>h3 tags have a size of 34px</h3>
+                <div class="h3">h3 classes have a size of 34px</div>
+                
+                <h4>h4 tags have a size of 28px</h4>
+                <div class="h4">h4 classes have a size of 28px</div>
+                
+                <h5>h5 tags have a size of 22px</h5>
+                <div class="h5">h5 classes have a size of 22px</div>
+                 
+                <h6>h6 tags have a size of 16px</h6>
+                <div class="h6">h6 classes have a size of 16px</div>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;h1&gt;h1 tags have a size of 46px&lt;/h1&gt;
+&lt;div class=&quot;h1&quot;&gt;h1 classes have a size of 46px&lt;/div&gt;
+
+&lt;h2&gt;h2 tags have a size of 40px&lt;/h2&gt;
+&lt;div class=&quot;h2&quot;&gt;h2 classes have a size of 40px&lt;/div&gt;
+
+&lt;h3&gt;h3 tags have a size of 34px&lt;/h3&gt;
+&lt;div class=&quot;h3&quot;&gt;h3 classes have a size of 34px&lt;/div&gt;
+
+&lt;h4&gt;h4 tags have a size of 28px&lt;/h4&gt;
+&lt;div class=&quot;h4&quot;&gt;h4 classes have a size of 28px&lt;/div&gt;
+
+&lt;h5&gt;h5 tags have a size of 22px&lt;/h5&gt;
+&lt;div class=&quot;h5&quot;&gt;h5 classes have a size of 22px&lt;/div&gt;
+    
+&lt;h6&gt;h6 tags have a size of 16px&lt;/h6&gt;
+&lt;div class=&quot;h6&quot;&gt;h6 classes have a size of 16px&lt;/div&gt;
+                </code>
+                </pre>
+            </div>        
+        </div>   
+
+        <div class="row mt-2 bg-primary-light min-vh-3 p-1  br-sm">
+            <h4 class="ml-1 mr-1">Text align</h4> 
+            <p class="ml-1 mr-1">Set text alignment with <code>center</code>, <code>start</code> or <code>end</code>.</p>
+            <div class="col-xs-12 pl-1 pr-1 mt-1"> 
+                <div class="text-start">Start aligned text.</div>
+                <div class="text-center">Center aligned text.</div>
+                <div class="text-end">End aligned text.</div>
+            </div>
+
+            <div class="col-xs-12 p-1 pt-2">
+                <pre>
+                <code class="bg-white border-gray">
+&lt;div class=&quot;text-start&quot;&gt;Start aligned text.&lt;/div&gt; 
+&lt;div class=&quot;text-center&quot;&gt;Center aligned text.&lt;/div&gt;
+&lt;div class=&quot;text-end&quot;&gt;Εnd aligned text.&lt;/div&gt;
+                </code>
+                </pre>
+            </div>        
+        </div>  
+    
+    </div>   
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

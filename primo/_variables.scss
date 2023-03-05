@@ -1,0 +1,49 @@
+/*------variables-------*/
+// theme colors
+$primary: rgb(235, 235, 235);
+$secondary: rgb(100, 100, 100);
+$info: rgb(0, 226, 188);
+
+// color palette (create map)
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "info": $info,
+    "blue": rgb(58, 117, 226),
+    "red": rgb(224, 42, 42),
+    "yellow": rgb(255, 238, 0),
+    "green": rgb(32, 172, 65),
+    "orange": rgb(255, 147, 23),
+    "purple": rgb(200, 1, 200),
+    "black": black,
+    "white": white
+);
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// border
+$base-border-thickness: 2px;
+$base-border-radius: 16px;
+
+// box shadow
+$box-shadow: 2px 2px 8px 4px rgba(0,0,0,0.40);
+$box-shadow-sm: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+$box-shadow-lg: 3px 3px 12px 8px rgba(0,0,0,0.50);
+$box-shadow-i: 2px 2px 8px 4px rgba(0,0,0,0.40) inset;
+$box-shadow-sm-i: 0px 0px 4px 2px rgba(0, 0, 0, 0.25) inset;
+$box-shadow-lg-i: 3px 3px 12px 8px rgba(0,0,0,0.50) inset;
+
+
+// font sizes
+$base-font-size: 16px;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+// width - height
+$base-height: 100vh;
+$base-width: 100%;
+ 

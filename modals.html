@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Modals</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+    <div class="container mt-2">
+        <h2>Modal</h2>
+        <p>Modals are a web page element that pops up and displays in front of other page content.
+        You can use modals for doing things like storing information you don't want to immediately see on a webpage.</p>
+      
+        <hr class="mt-1">
+    </div>
+
+    <div class="container min-vh-3">
+        <div class="row mt-2 bg-primary-light pl-1 pr-1 pt-1 br-t-sm">    
+            <h4 class="ml-1 mr-1">Basic Modal Example</h4> 
+            <p class="ml-1 mr-1">Any element inside the <code>modal-pointer</code> class can be used to trigger the modal. The <code>data-modal-target</code> attribute is required to have the same name as the <code>data-modal-name</code> of the modal that is desired to be opened.</p>
+            <p class="ml-1 mr-1">*Modals can have more than one trigger.</p>
+            <p class="ml-1 mr-1">**Click the button to trigger the modal.</p>
+        </div>
+        <div class="row p-2 bg-primary-light br-b-sm">
+
+            <!-- Trigger Modal -->
+            <div class="modal-pointer" data-modal-target = "basic-modal-example">
+                <button class="btn-blue text-white">Click me</button>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" data-modal-name = "basic-modal-example">
+                <div class="modal-content modal-size-md bg-white border-sm-secondary">
+                    <div class="modal-header"> 
+                        <h1>Modal Title</h1>
+                        <div class="close-btn">&#10005;</div>
+                    </div><hr>
+                    <div class="modal-body">
+                        <h3>Modal Body</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde cupiditate qui enim ut esse illum corporis delectus! Perferendis voluptatem, harum vero, quidem dolor aut non deleniti facere, magni natus libero!</p>
+                        <button class="mt-2 btn-info btn-sm text-white">Button</button>
+                    </div>
+                </div>
+            </div>
+        
+             <div class="col-xs-12 pt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;!-- Trigger Modal --&gt;
+&lt;div class=&quot;modal-pointer&quot; data-name=&quot;modal-0&quot;&gt;
+    &lt;button class=&quot;btn-blue text-white&quot;&gt;Click me&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;modal&quot; data-target=&quot;modal-0&quot;&gt;
+    &lt;div class=&quot;modal-content modal-size-md bg-white border-sm-secondary&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt; 
+            &lt;h1&gt;Modal Title&lt;/h1&gt;
+            &lt;div class=&quot;close-btn&quot;&gt;&amp;#10005;&lt;/div&gt;
+        &lt;/div&gt;&lt;hr&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;h3&gt;Modal Body&lt;/h3&gt;
+            &lt;p&gt;.....&lt;/p&gt;
+            &lt;button class=&quot;mt-2 btn-info btn-sm text-white&quot;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>  
+
+            <div class="col-xs-12 mt-1">
+                <h5>The following JavaScript code snippet is required for the modals to work.</h5>
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;script&gt;
+    let getModal = document.querySelectorAll('#modal'); 
+    
+    document.querySelectorAll('.modal-pointer').forEach(item => {
+    item.onclick = () => {
+        getModal.forEach(view =>{ 
+                let modalTarget = item.getAttribute('data-modal-target');
+                let modalName = view.getAttribute('data-modal-name')
+
+                if(modalTarget == modalName){        
+                    view.style.display = 'flex'; 
+                }
+            })
+        }
+    }) 
+
+    getModal.forEach(close =>{
+        close.querySelector('.modal-content .close-btn').onclick = () =>{
+        setTimeout(() => { close.style.display = 'none'; }, 100);
+        };    
+
+        close.onclick = (e) =>{
+            if(e.target.id == "modal"){
+                close.style.display = 'none';  
+            }
+        };
+    });
+&lt;/script&gt;
+               </code>
+               </pre>
+            </div>  
+
+        </div>
+    </div>    
+
+    <div class="container min-vh-3">
+        <div class="row mt-2 bg-primary-light pl-1 pr-1 pt-1 br-t-sm">    
+            <h4 class="ml-1 mr-1">Modal Sizes</h4> 
+            <p class="ml-1 mr-1">You can use the <code>modal-size-md</code> class as shown in example above, or use <code>modal-size-lg</code> to create a modal which takes up most of the screen.</p>
+        </div>
+        <div class="row p-2 bg-primary-light br-b-sm">
+
+            <!-- Trigger Modal -->
+            <div class="modal-pointer" data-modal-target = "large-modal-example">
+                <button class="btn-blue text-white">Click me</button>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" data-modal-name = "large-modal-example">
+                <div class="modal-content modal-size-lg bg-white border-sm-secondary">
+                    <div class="modal-header"> 
+                        <h1>Large Modal Title</h1>
+                        <div class="close-btn">&#10005;</div>
+                    </div><hr>
+                    <div class="modal-body">
+                        <h3>Large Modal Body</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium sunt expedita deleniti. Beatae nesciunt fugit amet ullam ad unde dolorum nihil eligendi similique ex, molestias maiores sit doloribus illum atque, voluptas doloremque hic eum distinctio quos deleniti perspiciatis nemo sequi consequatur. Earum nemo inventore fugit magni sint ex impedit corrupti praesentium mollitia laboriosam debitis perspiciatis provident quaerat exercitationem omnis molestiae, eum hic dignissimos cumque veritatis quam tempore est. Molestias unde id aperiam eius, commodi animi fugit dolor laborum magnam in ad perferendis voluptate velit tempora eos quod sapiente ipsam esse est numquam, modi facilis saepe. Modi officia facilis qui?</p>
+                        <button class="mt-2 btn-info btn-sm text-white">Button</button>
+                    </div>
+                </div>
+            </div>
+        
+             <div class="col-xs-12 pt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;!-- Trigger Modal --&gt;
+&lt;div class=&quot;modal-pointer&quot; data-modal-target = &quot;large-modal-example&quot;&gt;
+    &lt;button class=&quot;btn-blue text-white&quot;&gt;Click me&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;modal&quot; data-modal-name = &quot;large-modal-example&quot;&gt;
+    &lt;div class=&quot;modal-content modal-size-lg bg-white border-sm-secondary&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt; 
+            &lt;h1&gt;Large Modal Title&lt;/h1&gt;
+            &lt;div class=&quot;close-btn&quot;&gt;&amp;#10005;&lt;/div&gt;
+        &lt;/div&gt;&lt;hr&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;h3&gt;Large Modal Body&lt;/h3&gt;
+            &lt;p&gt;.....&lt;/p&gt;
+            &lt;button class=&quot;mt-2 btn-info btn-sm text-white&quot;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>  
+ 
+        </div>
+    </div>  
+
+    <div class="container min-vh-3 mb-5">
+        <div class="row mt-2 bg-primary-light pl-1 pr-1 pt-1 br-t-sm">    
+            <h4 class="ml-1 mr-1">Customization</h4> 
+            <p class="ml-1 mr-1">Use Primos Layouts, Components and Utilities to customize your modals like you would customize any page. Bellow are a few simple examples</p>
+        </div>
+
+        <!-- Images -->
+        <div class="row pt-1  bg-primary-light pl-1 pr-1">
+            <h5 class="ml-1 mr-1">Images</h5>
+            <p class="ml-1 mr-1">Use images inside your modal or use images to act as modal triggers.</p>
+        </div>  
+        <div class="row pb-2 pl-2 pr-2 bg-primary-light br-b-sm display-f">
+            <!-- Image Modal Trigger-->
+            <div class="modal-pointer mr-1 mt-1" data-modal-target = "image-modal-example">
+                <img src="imgs/wall.jpg" alt="" class="thumbnail" style="cursor: pointer;">
+            </div>
+
+            <!-- Trigger Modal -->
+            <div class="modal-pointer mt-1 align-self-end" data-modal-target = "image-modal-example">
+                <button class="btn-blue text-white">Image Modal</button>
+            </div>
+ 
+            <!-- Modal -->
+            <div id="modal" data-modal-name = "image-modal-example">
+                <div class="modal-content modal-size-md bg-white border-sm-secondary">
+                    <div class="modal-header"> 
+                        <h1>Image Modal</h1>
+                        <div class="close-btn">&#10005;</div>
+                    </div><hr>
+                    <div class="modal-body">
+                        <img src="imgs/wall.jpg" alt="">
+                        <h3>Large Modal Body</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium sunt expedita deleniti. Beatae nesciunt fugit amet ullam ad unde dolorum nihil eligendi similique ex, molestias maiores sit doloribus illum. </p>
+                        <button class="mt-2 btn-info btn-sm text-white">Button</button>
+                    </div>
+                </div>
+            </div>
+        
+             <div class="col-xs-12 pt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;!-- Image Modal Trigger--&gt;
+&lt;div class=&quot;modal-pointer mr-1 mt-1&quot; data-modal-target = &quot;image-modal-example&quot;&gt;
+    &lt;img src=&quot;...&quot; class=&quot;thumbnail&quot; style=&quot;cursor: pointer;&quot;&gt;
+&lt;/div&gt;
+
+&lt;!-- Trigger Modal --&gt;
+&lt;div class=&quot;modal-pointer mt-1 align-self-end&quot; data-modal-target = &quot;image-modal-example&quot;&gt;
+    &lt;button class=&quot;btn-blue text-white&quot;&gt;Image Modal&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;modal&quot; data-modal-name = &quot;image-modal-example&quot;&gt;
+    &lt;div class=&quot;modal-content modal-size-md bg-white border-sm-secondary&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt; 
+            &lt;h1&gt;Image Modal&lt;/h1&gt;
+            &lt;div class=&quot;close-btn&quot;&gt;&amp;#10005;&lt;/div&gt;
+        &lt;/div&gt;&lt;hr&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;img src=&quot;...&quot; &gt;
+            &lt;h3&gt;Large Modal Body&lt;/h3&gt;
+            &lt;p&gt;...... &lt;/p&gt;
+            &lt;button class=&quot;mt-2 btn-info btn-sm text-white&quot;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>  
+ 
+        </div>
+        <!------------------------------------------------------------------------------------->
+
+        <!-- Colors, Borders & Lists -->
+        <div class="row pt-1  bg-primary-light pl-1 pr-1">
+            <h5 class="ml-1 mr-1">Colors, Borders & Lists</h5>
+        </div>  
+        <div class="row pb-2 pl-2 pr-2 bg-primary-light br-b-sm display-f">
+            <!-- Trigger Modal 1-->
+            <div class="modal-pointer mt-1 mr-1" data-modal-target = "colBord1-modal-example">
+                <button class="btn-blue text-white">Colors & Borders #1</button>
+            </div>
+
+            <!-- Trigger Modal 2 -->
+            <div class="modal-pointer mt-1" data-modal-target = "colBord2-modal-example">
+                <button class="btn-blue text-white">Colors & Borders #2</button>
+            </div>
+ 
+            <!-- Modal 1-->
+            <div id="modal" data-modal-name = "colBord1-modal-example">
+                <div class="modal-content modal-size-md bg-black text-white br-lg">
+                    <div class="modal-header"> 
+                        <h1>Modal Title</h1>
+                        <div class="close-btn text-white">&#10005;</div>
+                    </div><hr>
+                    <div class="modal-body">
+                        <h3 class="text-blue">Modal Body</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium sunt expedita deleniti. Beatae nesciunt fugit amet ullam ad unde dolorum nihil eligendi similique ex, molestias maiores sit doloribus illum. </p>
+                        <button class="mt-2 btn-blue btn-md text-white">Button</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 2-->
+            <div id="modal" data-modal-name = "colBord2-modal-example">
+                <div class="modal-content modal-size-md bg-white border-lg-b-purple">
+                    <div class="modal-header"> 
+                        <h1 class="text-red-dark">Modal Title</h1>
+                        <div class="close-btn text-red-dark text-hover-purple">&#10005;</div>
+                    </div> 
+                    <div class="modal-body">
+                        <h3>Modal Body</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium sunt expedita deleniti. Beatae nesciunt fugit amet ullam ad unde dolorum nihil eligendi similique ex, molestias maiores sit doloribus illum. </p>
+                        <ul class="li-group-square mt-1"> 
+                            <div class="fw-bold text-red-dark">Square List</div>         
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-xs-12 pt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;!-- Trigger Modal 1--&gt;
+&lt;div class=&quot;modal-pointer mt-1 mr-1&quot; data-modal-target = &quot;colBord1-modal-example&quot;&gt;
+    &lt;button class=&quot;btn-blue text-white&quot;&gt;Colors &amp; Borders #1&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Trigger Modal 2 --&gt;
+&lt;div class=&quot;modal-pointer mt-1&quot; data-modal-target = &quot;colBord2-modal-example&quot;&gt;
+    &lt;button class=&quot;btn-blue text-white&quot;&gt;Colors &amp; Borders #2&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal 1--&gt;
+&lt;div id=&quot;modal&quot; data-modal-name = &quot;colBord1-modal-example&quot;&gt;
+    &lt;div class=&quot;modal-content modal-size-md bg-black text-white br-lg&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt; 
+            &lt;h1&gt;Modal Title&lt;/h1&gt;
+            &lt;div class=&quot;close-btn text-white&quot;&gt;&amp;#10005;&lt;/div&gt;
+        &lt;/div&gt;&lt;hr&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;h3 class=&quot;text-blue&quot;&gt;Modal Body&lt;/h3&gt;
+            &lt;p&gt;.....&lt;/p&gt;
+            &lt;button class=&quot;mt-2 btn-blue btn-md text-white&quot;&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal 2--&gt;
+&lt;div id=&quot;modal&quot; data-modal-name = &quot;colBord2-modal-example&quot;&gt;
+    &lt;div class=&quot;modal-content modal-size-md bg-white border-lg-b-purple&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt; 
+            &lt;h1 class=&quot;text-red-dark&quot;&gt;Modal Title&lt;/h1&gt;
+            &lt;div class=&quot;close-btn text-red-dark text-hover-purple&quot;&gt;&amp;#10005;&lt;/div&gt;
+        &lt;/div&gt; 
+        &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;h3&gt;Modal Body&lt;/h3&gt;
+            &lt;p&gt;.....&lt;/p&gt;
+            &lt;ul class=&quot;li-group-square mt-1&quot;&gt; 
+                &lt;div class=&quot;fw-bold text-red-dark&quot;&gt;Square List&lt;/div&gt;         
+                &lt;li&gt;List item 1&lt;/li&gt;
+                &lt;li&gt;List item 2&lt;/li&gt;
+                &lt;li&gt;List item 3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>  
+ 
+        </div>
+        <!------------------------------------------------------------------------------------->
+
+        <!-- Grid & Alignments -->
+        <div class="row pt-1  bg-primary-light pl-1 pr-1">
+            <h5 class="ml-1 mr-1">Grids</h5>
+            <p class="ml-1 mr-1">Use grids inside modals, as you would use them in any page.</p>
+        </div>  
+        <div class="row pb-2 pl-2 pr-2 bg-primary-light br-b-sm display-f">
+            <!-- Trigger Modal 1-->
+            <div class="modal-pointer mt-1 mr-1" data-modal-target = "grid-modal-example">
+                <button class="btn-blue text-white">Grid Modal</button>
+            </div>
+
+            <!-- Modal 1-->
+            <div id="modal" data-modal-name = "grid-modal-example">
+
+                <div class="modal-content modal-size-lg bg-white">
+                    <div class="modal-header"> 
+                        <h1>Grid Modal</h1>
+                        <div class="close-btn">&#10005;</div>
+                    </div><hr>
+                    <div class="modal-body">
+
+                        <div class="row display-f mt-2"> 
+                            <div class="col-xs-12 col-md-6 bg-white border-sm-secondary p-1">
+                               col #1
+                                <div class="row display-f">
+                                    <div class="col-xs-6 bg-white border-sm-secondary p-1 mt-1">col #1-1</div>
+                                    <div class="col-xs-6 bg-white border-sm-secondary p-1 mt-1">col #1-2</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 bg-white border-sm-secondary p-1">
+                                col #2
+                                <div class="row display-f">
+                                    <div class="col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-1</div>
+                                    <div class="col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-2</div>
+                                    <div class="col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-3</div>
+                                    <div class="col-xs-6 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-4</div>
+                                    <div class="col-xs-6 col-md-12 bg-white border-sm-secondary p-1 mt-1">col #2-5</div>
+                                </div>
+                            </div>
+                        </div>  
+
+                        <div class="row display-f justify-start p-2">  
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                         </div> <hr>
+                
+                         <div class="row display-f justify-center p-2">  
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                         </div> <hr>
+                         
+                         <div class="row display-f justify-end p-2">  
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                         </div> <hr>
+                
+                         <div class="row display-f justify-space-between p-2">  
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                         </div> <hr>
+                         
+                         <div class="row display-f justify-space-around p-2">  
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                         </div> <hr>
+                
+                         <div class="row display-f justify-space-evenly p-2">  
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+                         </div> 
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 pt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;!-- Trigger Modal 1--&gt;
+&lt;div class=&quot;modal-pointer mt-1 mr-1&quot; data-modal-target = &quot;grid-modal-example&quot;&gt;
+    &lt;button class=&quot;btn-blue text-white&quot;&gt;Grid Modal&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal 1--&gt;
+&lt;div id=&quot;modal&quot; data-modal-name = &quot;grid-modal-example&quot;&gt;
+
+    &lt;div class=&quot;modal-content modal-size-lg bg-white&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt; 
+            &lt;h1&gt;Grid Modal&lt;/h1&gt;
+            &lt;div class=&quot;close-btn&quot;&gt;&amp;#10005;&lt;/div&gt;
+        &lt;/div&gt;&lt;hr&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+
+            &lt;div class=&quot;row display-f mt-2&quot;&gt; 
+                &lt;div class=&quot;col-xs-12 col-md-6 bg-white border-sm-secondary p-1&quot;&gt;
+                    col #1
+                    &lt;div class=&quot;row display-f&quot;&gt;
+                        &lt;div class=&quot;col-xs-6 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #1-1&lt;/div&gt;
+                        &lt;div class=&quot;col-xs-6 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #1-2&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-xs-12 col-md-6 bg-white border-sm-secondary p-1&quot;&gt;
+                    col #2
+                    &lt;div class=&quot;row display-f&quot;&gt;
+                        &lt;div class=&quot;col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #2-1&lt;/div&gt;
+                        &lt;div class=&quot;col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #2-2&lt;/div&gt;
+                        &lt;div class=&quot;col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #2-3&lt;/div&gt;
+                        &lt;div class=&quot;col-xs-6 col-md-3 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #2-4&lt;/div&gt;
+                        &lt;div class=&quot;col-xs-6 col-md-12 bg-white border-sm-secondary p-1 mt-1&quot;&gt;col #2-5&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;  
+
+            &lt;div class=&quot;row display-f justify-start p-2&quot;&gt;  
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; &lt;hr&gt;
+    
+                &lt;div class=&quot;row display-f justify-center p-2&quot;&gt;  
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; &lt;hr&gt;
+                
+                &lt;div class=&quot;row display-f justify-end p-2&quot;&gt;  
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; &lt;hr&gt;
+    
+                &lt;div class=&quot;row display-f justify-space-between p-2&quot;&gt;  
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; &lt;hr&gt;
+                
+                &lt;div class=&quot;row display-f justify-space-around p-2&quot;&gt;  
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; &lt;hr&gt;
+    
+                &lt;div class=&quot;row display-f justify-space-evenly p-2&quot;&gt;  
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;col-xs-2 p-2 bg-white border-sm-black&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt; 
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+                </pre>
+            </div>  
+        </div>
+                <!------------------------------------------------------------------------------------->
+    </div>  
+
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/modal.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

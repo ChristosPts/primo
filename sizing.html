@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Sizing</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Sizing</h2>
+        <p class=" ">Change the width and height of elements with our premade classes.</p>
+        <p> Classes for <code>min</code> and <code>max</code>  are also included. Add them before the width/height class to use ex:
+        <code>min-w-25</code>, <code> max-vh-2</code>.</p>
+        <hr class="mt-1">
+    </div>
+
+    <div class="container min-vh-3">
+        <div class="row bg-primary-light mt-2 pl-1 pt-1 pr-1 br-t-sm">  
+            <h4 class="ml-1 mr-1">Relative to the parent</h4> 
+            <p class="ml-1 mr-1">Define a size as relative to an element's parent object.</p>
+            <p class="ml-1 mr-1">The sizes include four different percentages <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>.</p>
+        </div>     
+        
+        <div class="row bg-primary-light min-vh-2 p-1 pb-0">  
+            <div class="col-xs-12 pl-1 pr-1"> 
+               <div class="p-1 w-25 bg-info-dark text-end">
+                    25%
+               </div>
+            </div>
+            <div class="col-xs-12 pl-1 pr-1"> 
+                <div class="p-1 w-50 bg-info text-end">
+                     50%
+                </div>
+             </div>
+             <div class="col-xs-12 pl-1 pr-1"> 
+                <div class="p-1 w-75 bg-info-dark text-end">
+                     75%
+                </div>
+             </div>
+             <div class="col-xs-12 pl-1 pr-1"> 
+                <div class="p-1 w-100 bg-info text-end">
+                     100%
+                </div>
+             </div>
+
+             <div class="col-xs-12 p-1">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;w-25&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;w-50&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;w-50&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;w-100&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+        </div>       
+
+        <div class="row bg-primary-light p-1 br-b-sm display-f ">  
+            <div class="col-xs-6 col-sm-3 pl-1 pr-1 min-vh-3"> 
+               <div class="p-1 h-25 bg-info-dark text-end">
+                    25%
+               </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 pl-1 pr-1 min-vh-3"> 
+                <div class="p-1 h-50 bg-info text-end">
+                     50%
+                </div>
+             </div>
+             <div class="col-xs-6 col-sm-3 pl-1 pr-1 min-vh-3"> 
+                <div class="p-1 h-75 bg-info-dark text-end">
+                     75%
+                </div>
+             </div>
+             <div class="col-xs-6 col-sm-3 pl-1 pr-1 min-vh-3"> 
+                <div class="p-1 h-100 bg-info text-end">
+                     100%
+                </div>
+             </div>
+             <div class="col-xs-12 p-1 mt-1">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;h-25&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;h-50&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;h-50&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;h-100&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+    
+        </div>   
+
+        <div class="row bg-primary-light mt-2 p-1 br-sm mb-5">  
+            <h4 class="ml-1 mr-1">Relative to the viewport</h4> 
+            <p class="ml-1 mr-1">Define the height relative to the viewport with <code>*vh-</code></p>
+            <p class="ml-1 mr-1">There are 10 view-height options, from 10vh to 100vh. The <code>min</code> and <code>max</code> prefixes can also be used with this class.</p>
+             
+                <div class="col-xs-12 p-1 mt-1">
+                    <pre>
+                    <code  class="bg-white border-gray ">
+    &lt;div class=&quot;vh-1&quot;&gt;for a view-height of 10vh&lt;/div&gt;
+    &lt;div class=&quot;vh-2&quot;&gt;for a view-height of 20vh&lt;/div&gt;
+    &lt;div class=&quot;vh-3&quot;&gt;for a view-height of 30vh&lt;/div&gt;      
+    &lt;div class=&quot;vh-4&quot;&gt;for a view-height of 40vh&lt;/div&gt;
+    &lt;div class=&quot;vh-5&quot;&gt;for a view-height of 50vh&lt;/div&gt;
+    &lt;div class=&quot;vh-6&quot;&gt;for a view-height of 60vh&lt;/div&gt;
+    &lt;div class=&quot;vh-7&quot;&gt;for a view-height of 70vh&lt;/div&gt;      
+    &lt;div class=&quot;vh-8&quot;&gt;for a view-height of 80vh&lt;/div&gt;
+    &lt;div class=&quot;vh-9&quot;&gt;for a view-height of 90vh&lt;/div&gt;
+    &lt;div class=&quot;vh-10&quot;&gt;for a view-height of 100vh&lt;/div&gt;
+    &lt;div class=&quot;min-vh-30&quot;&gt;for a min view-height of 30vh&lt;/div&gt;      
+    &lt;div class=&quot;max-vh-40&quot;&gt;for a max view-height of 40vh&lt;/div&gt;
+                    </code>
+                    </pre>
+                </div>
+             
+        </div> 
+             
+      </div>  
+        
+    </div>    
+    
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

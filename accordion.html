@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <title>Accordions</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Accordions</h2>
+        <p class="mb-1">Create vertically collapsing accordions</p>
+        <ul class="mb-1 li-group-square">
+            <li>
+                Use the <code>checked</code> attribute on the <code>input</code> tag to keep one of the accordions open on load.
+            </li>
+            <li>
+                In each accordion the <code>id</code> attribute of the <code>input</code> tag corresponds to the <code>for</code> attribute of the <code>label</code> tag. These attributes need to match, in order to open the correct accordion.
+            </li>
+        </ul>
+        <hr>
+    </div>
+    
+    <div class="container min-vh-10 mb-5">    
+        <div class="row bg-primary-light  mt-2 min-vh-3 p-1 br-sm">  
+            <h4 class="ml-1 mr-1">Example #1</h4> 
+            <p class="ml-1 mr-1">Use <code>input type="radio"</code> to have only one expandable accordion.</p>
+            <div class="col-xs-12 p-1 mt-1"> 
+                <div class="accordion-wrap">
+                    <div class="accordion bg-info-dark" >
+                        <div class="accordion-body">
+                            <input type="radio" name="accordion" id="first-radio-accordion" checked>
+                            <label class="accordion-label text-white" for="first-radio-accordion">Radio accordion #1</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion bg-info-dark">
+                        <div class="accordion-body">
+                            <input type="radio" name="accordion" id="second-radio-accordion">
+                            <label class="accordion-label text-white" for="second-radio-accordion">Radio accordion #2</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion bg-info-dark">
+                        <div class="accordion-body">
+                            <input type="radio" name="accordion" id="third-radio-accordion">
+                            <label class="accordion-label text-white" for="third-radio-accordion">Radio accordion #3</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 p-1">
+        <pre >
+        <code  class="bg-white border-gray ">
+&lt;div class=&quot;col-xs-12 p-2&quot;&gt; 
+    &lt;div class=&quot;accordion-wrap&quot;&gt;
+        &lt;div class=&quot;accordion bg-info&quot; &gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;first-radio-accordion&quot; checked&gt;
+                &lt;label class=&quot;accordion-label&quot; for=&quot;first-radio-accordion&quot;&gt;Radio accordion #1&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;accordion bg-info&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;second-radio-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label&quot; for=&quot;second-radio-accordion&quot;&gt;Radio accordion #2&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;accordion bg-info&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;third-radio-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label&quot; for=&quot;third-radio-accordion&quot;&gt;Radio accordion #3&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+        </pre>
+            </div>
+        </div>
+
+        <div class="row bg-primary-light mt-2 min-vh-3 p-1 br-sm">  
+            <h4 class="ml-1 mr-1">Example #2</h4> 
+            <p class="ml-1 mr-1">Use <code>input type="checkbox"</code> to have multiple expandable accordions.</p>
+            <div class="col-xs-12 p-1"> 
+                <div class="accordion-wrap">
+                    <div class="accordion bg-info-dark" >
+                        <div class="accordion-body">
+                            <input type="checkbox" name="accordion" id="first-checkbox-accordion" checked>
+                            <label class="accordion-label text-white" for="first-checkbox-accordion">Checkbox accordion #1</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion bg-info-dark">
+                        <div class="accordion-body">
+                            <input type="checkbox" name="accordion" id="second-checkbox-accordion">
+                            <label class="accordion-label text-white" for="second-checkbox-accordion">Checkbox accordion #2</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion bg-info-dark">
+                        <div class="accordion-body">
+                            <input type="checkbox" name="accordion" id="third-checkbox-accordion">
+                            <label class="accordion-label text-white" for="third-checkbox-accordion">Checkbox accordion #3</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 p-1">
+            <pre>
+            <code class="bg-white border-gray ">
+&lt;div class=&quot;col-xs-12 p-2&quot;&gt; 
+    &lt;div class=&quot;accordion-wrap&quot;&gt;
+        &lt;div class=&quot;accordion bg-info-dark&quot; &gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;accordion&quot; id=&quot;first-checkbox-accordion&quot; checked&gt;
+                &lt;label class=&quot;accordion-label text-white&quot; for=&quot;first-checkbox-accordion&quot;&gt;Checkbox accordion #1&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;accordion bg-info-dark&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;accordion&quot; id=&quot;second-checkbox-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label text-white&quot; for=&quot;second-checkbox-accordion&quot;&gt;Checkbox accordion #2&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;accordion bg-info-dark&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;accordion&quot; id=&quot;third-checkbox-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label text-white&quot; for=&quot;third-checkbox-accordion&quot;&gt;Checkbox accordion #3&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+            </pre>
+            </div>
+
+        </div>
+
+        <p class="fw-bold font-size-xl mb-1 mt-3">Customization</p>
+        <p>The accordions are easily customizable, they are initially transparent so you can mix and match colors, change paddings/margins add borders etc.</p>
+        <hr class="mt-1">
+
+        <div class="row bg-primary-light  mt-2 min-vh-3 p-1 br-sm ">  
+            <h4 class="ml-1 mr-1">Example #3</h4> 
+            <p class="ml-1 mr-1">Accordions with margins, different fonts and colors.</p>
+            <div class="col-xs-12 p-1"> 
+                <div class="accordion-wrap ">
+                    <div class="accordion  bg-white" >
+                        <div class="accordion-body ">
+                            <input type="radio" name="accordion" id="first-customized-accordion" checked>
+                            <label class="accordion-label font-sm" for="first-customized-accordion">Custom accordion #1</label>
+                            
+                            <div class="accordion-content text-info-dark  font-sm">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion  bg-warning mt-2  border-black">
+                        <div class="accordion-body">
+                            <input type="radio" name="accordion" id="second-customized-accordion">
+                            <label class="accordion-label text-black" for="second-customized-accordion">Custom accordion #2</label>
+                            
+                            <div class="accordion-content text-red bg-primary-light">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion bg-blue-light mt-2">
+                        <div class="accordion-body">
+                            <input type="radio" name="accordion" id="third-customized-accordion">
+                            <label class="accordion-label  fw-bold   text-white" for="third-customized-accordion">Custom accordion #3</label>
+                            
+                            <div class="accordion-content bg-info-light  ">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 p-1">
+            <pre>
+            <code class="bg-white border-gray">
+&lt;div class=&quot;col-xs-12 p-2&quot;&gt; 
+    &lt;div class=&quot;accordion-wrap&quot;&gt;
+        &lt;div class=&quot;accordion bg-white&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;first-customized-accordion&quot; checked&gt;
+                &lt;label class=&quot;accordion-label font-sm&quot; for=&quot;first-customized-accordion&quot;&gt;Custom accordion #1&lt;/label&gt;
+                &lt;div class=&quot;accordion-content text-info-dark font-sm&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;accordion bg-warning mt-2 border-black&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;second-customized-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label text-black&quot; for=&quot;second-customized-accordion&quot;&gt;Custom accordion #2&lt;/label&gt;
+                &lt;div class=&quot;accordion-content text-red bg-primary-light&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;accordion bg-blue-light mt-2&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;accordion&quot; id=&quot;third-customized-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label fw-bold   text-white&quot; for=&quot;third-customized-accordion&quot;&gt;Custom accordion #3&lt;/label&gt;
+                &lt;div class=&quot;accordion-content bg-info-light  &quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+            </pre>
+            </div>   
+
+        </div>
+        
+
+        <div class="row bg-primary-light mt-2 p-1 br-t-sm">  
+            <h4 class="ml-1 mr-1">Example #4</h4> 
+            <p class="ml-1 mr-1">Change width and position with the <code>col-*</code> classes.</p></div>
+        <div class="row bg-primary-light p-1  display-f min-vh-4 br-b-sm">  
+            <div class="col-xs-12 col-md-4 pr-1 pl-1"> 
+                <div class="accordion-wrap ">
+                    <div class="accordion bg-info-dark p-1" >
+                        <div class="accordion-body ">
+                            <input type="checkbox" name="accordion" id="first-col-accordion" checked>
+                            <label class="accordion-label text-white" for="first-col-accordion">Col accordion #1</label>
+                            
+                            <div class="accordion-content bg-white">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion bg-info-dark p-1" >
+                        <div class="accordion-body ">
+                            <input type="checkbox" name="accordion" id="second-col-accordion">
+                            <label class="accordion-label text-white" for="second-col-accordion">Col accordion #2</label>
+                            
+                            <div class="accordion-content bg-white ">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!</p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-md-8 p-1">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit recusandae quam, nulla ratione dolores, ullam ipsa odio animi ad sed commodi voluptas eaque perspiciatis dolore, error autem fugiat numquam deleniti dignissimos facilis necessitatibus. Inventore modi, nobis molestiae iure blanditiis cum praesentium molestias aspernatur natus nesciunt harum, consequuntur sit quas ab sunt earum tenetur eos dicta at labore quo quam, laborum vero. Asperiores aliquid est totam quam ipsa soluta ad commodi consectetur nesciunt laudantium, iste repudiandae, aut, voluptatem sit. </p>
+            </div>
+
+            <div class="col-xs-12 p-1">
+                <pre>
+                <code class="bg-white">
+&lt;div class=&quot;col-xs-12 col-md-4 p-2&quot;&gt; 
+    &lt;div class=&quot;accordion-wrap &quot;&gt;
+        &lt;div class=&quot;accordion bg-info-dark p-2&quot; &gt;
+            &lt;div class=&quot;accordion-body &quot;&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;accordion&quot; id=&quot;first-col-accordion&quot; checked&gt;
+                &lt;label class=&quot;accordion-label text-white&quot; for=&quot;first-col-accordion&quot;&gt;Col accordion #1&lt;/label&gt;
+                
+                &lt;div class=&quot;accordion-content bg-white&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;accordion bg-info-dark p-2&quot; &gt;
+            &lt;div class=&quot;accordion-body &quot;&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;accordion&quot; id=&quot;second-col-accordion&quot;&gt;
+                &lt;label class=&quot;accordion-label text-white&quot; for=&quot;second-col-accordion&quot;&gt;Col accordion #2&lt;/label&gt;
+                
+                &lt;div class=&quot;accordion-content bg-white &quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-xs-12 col-md-8 p-2&quot;&gt;
+    &lt;h3&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.  &lt;/p&gt;
+&lt;/div&gt;
+                </code>
+                </pre>
+            </div>  
+        </div>
+    </div>
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+ 
+</body>
+</html>
+ 

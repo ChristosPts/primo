@@ -1,0 +1,80 @@
+%li-custom {
+    position: relative;
+    padding-left: 1.2rem;
+   
+    &:before {
+        position: absolute;
+        left: 0;
+    }
+}
+
+
+.li {
+    &-disc {
+        margin-left: 20px;
+        list-style: disc;
+    }
+
+    &-square {
+        margin-left: 20px;
+        list-style: square;
+    }
+
+    &-check {
+        @extend %li-custom;
+        &:before {
+            content: '\2714'
+        }
+    }
+
+    &-x {
+        @extend %li-custom;
+        &:before {
+            content: '\2716'
+        }
+    }
+
+    &-arrow {
+        padding-left: 1.5rem;
+        @extend %li-custom;
+        &:before {
+            content: '\27A4'
+        }
+    }
+}
+
+.li-group {
+    &-disc{
+        li{ 
+            @extend .li-disc;
+        }
+    }
+
+    &-square{
+        li{ 
+            @extend .li-square;
+        }
+    }
+
+    &-check{
+        li {
+            @extend .li-check;
+          }
+    }
+
+    &-x{
+        li {
+            @extend .li-x;
+          }
+    }
+
+    &-arrow{
+        li {
+            @extend .li-arrow;
+          }
+    }
+    
+}
+ 
+ 
+ 

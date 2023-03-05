@@ -1,0 +1,47 @@
+.accordion {
+    width: 100%;
+    padding: 8px 0px 0px 0px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+    label {
+        padding: 8px 16px 16px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &::after {
+            content: "\276F";
+            width: 1rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            transition: all .4s;
+        }
+    }
+     input{
+        display: none;
+    }   
+    .accordion-content {
+        padding: 0 8px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.7s;
+
+        p {
+            padding: 16px 8px;
+        }
+    }
+ 
+}
+
+ input:checked + .accordion-label::after {
+    -webkit-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+}
+
+input:checked ~ .accordion-content{
+    max-height: 100vh;
+}

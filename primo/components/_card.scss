@@ -1,0 +1,39 @@
+// for division the math package is used
+@use 'sass:math';
+
+.card {
+    display: block;
+    border: 2px solid gray;
+    background: transparent;
+    
+    .card-title {
+        margin-bottom: $base-padding*0.4;
+        font-weight: bold;
+    }    
+
+    .card-body { 
+        padding: 12px 16px 20px 16px;
+        height: 100%;
+        a {
+            cursor: pointer;
+        }
+
+    }
+
+
+    .card-image {
+        height: 100%;
+        width: 100%;
+        
+
+        img {
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+            height: 100%;
+          
+        }
+       
+    
+    }
+}

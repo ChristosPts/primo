@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: gray rgb(165, 165, 165);
+    scroll-behavior: smooth;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+   width: 12px;
+}
+ 
+*::-webkit-scrollbar-track {
+   background: rgb(165, 165, 165);
+}
+ 
+*::-webkit-scrollbar-thumb {
+   background-color: gray;
+   border-radius: 20px;
+   border: 3px solid rgb(165, 165, 165);
+}
+ 
+html, body {  
+    overflow-x: hidden; 
+    font-family: 'PT Sans', sans-serif;
+    height: 100%;
+    color:rgb(45, 45, 45) ;
+}
+ 
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+h1,.h1 {
+    font-size: 46px; 
+    line-height: 46px;
+}
+
+h2,.h2 {
+    font-size: 40px; 
+    line-height: 40px;
+}
+
+h3,.h3 {
+    font-size: 34px; 
+    line-height: 34px;
+}
+
+h4,.h4 {
+    font-size: 28px; 
+    line-height: 28px;
+}
+
+h5,.h5{
+    font-size: 22px; 
+    line-height: 22px;
+}    
+
+h6,.h6 {
+   font-size: 16px; 
+   line-height: 16px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ol,ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ 
+li {
+    list-style: none;
+}
+
+.bodyScroll {
+    overflow-y: hidden;
+}
+
+p,h1,h2,h3,h4,h5,h6{  word-wrap: break-word; }
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: none;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #b5b5b5;
+    background-image: linear-gradient(to right, #c8c8c8,#b5b5b5, #c8c8c8);
+}
+
+pre > code {
+    white-space: pre;
+    padding-right: 2.5rem;
+    display: block; 
+}
+
+pre {
+    height: 100%;
+    overflow: auto;
+    margin: 0 auto;
+}
+ 
+code {
+    color: rgb(58, 117, 226);
+    font-size: 16px;
+    display: inline-block; 
+    max-height: 50vh;   
+} 
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: unset;
+    table-layout: fixed;
+}
+
+footer {
+ position: relative;
+ 
+  width: 100%;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.box-lg {
+    width: 200px;
+    height: 200px;
+}
+
+#footer-container li{
+    
+    max-width:max-content;
+}
+
+#footer-container li:hover{
+    color: #00b596;
+    width: 100%;
+}
+
+ 
+ 

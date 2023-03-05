@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Grid</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Grid System</h2>
+        <p class=" ">Use primos twelve column system to build respnosive layouts.</p>
+        <p class=" ">The grid system uses a series of containers, rows, and columns to layout and align content.</p>
+        <hr class="mt-1">
+    </div>     
+
+    <div class="container mb-5">
+
+        <div class="row bg-primary-light mt-2 min-vh-2 p-2 br-sm"> 
+           <div class="col-xs-12">
+                <h4>How the grid system works</h4> 
+                <ul class="li-group-square mt-1 pb-1">
+                    <li class="mt-1">
+                        <span class="fw-bold">The grid is supported by  our predefined
+                            <a href="breakpoints.html" class="text-info-dark"> Breakpoints</a>.
+                        </span> . Breakpoints are based on min-width media queries, meaning they affect that breakpoint and all those above it (e.g., <code> .col-sm-4 applies to sm, md, lg, xl, and xxl </code>). This means you can control container and column sizing and behavior by each breakpoint.
+                    </li>
+                    <li class="mt-1">
+                        <a href="containers.html" class="fw-bold text-info-dark">Containers</a> center and horizontally pad your content. Use <code>container</code> for a responsive pixel width across all viewports and devices.
+                    </li>
+                    <li class="mt-1"><span class="fw-bold">Rows</span> are wrappers for columns and require the use of the <code>display-f</code> class, in order to create a responsive grid.</li>
+                    <li class="mt-1"><span class="fw-bold">Columns: </span>
+                        There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., col-4 spans four). Widths are set in percentages so you always have the same relative sizing.
+                    </li>
+                </ul>
+           </div>
+           
+           <div class="col-xs-12 mt-2">
+                <h4>Column options</h4> 
+                <p>There are <span class="fw-bold">twelve columns in total</span>, and they use the six default <a href="breakpoints.html" class="text-info-dark">breakpoints</a>. Each of these breakpoints have their own container, unique class prefix, and modifiers. The column syntax is: <code>col-{breakpoint}-{no. of cols occupied out of 12}</code>,  (it is not required that you use all 12 available columns). </p> 
+                
+                <p class="mt-1">The six default grid tiers (breakpoints) are as follow:</p>
+                <ul class="li-group-square mt-1 pb-1">
+                    <li class="mt-1">
+                        Extra Small - <code>xs</code>
+                    </li>
+                    <li class="mt-1">
+                        Small - <code>sm </code>
+                    </li>
+                    <li class="mt-1">
+                        Medium -  <code>md</code>
+                    </li>
+                    <li class="mt-1">
+                        Large - <code> lg</code>
+                    </li>
+                    <li class="mt-1">
+                        Extra Large - <code>xl </code>
+                    </li>
+                    <li class="mt-1">
+                        Extra Extra Large - <code>xxl </code>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+
+        <!--Example 1-->
+        <div class="row bg-primary-light br-t-sm mt-2 p-1 ">
+            <h4 class="ml-1 mr-1">Example #1</h4> 
+            <p class="ml-1 mr-1">The following is a grid in it's most simple form, the example creates three equal-width columns across all devices and viewports using our predefined grid classes.</p>
+        </div>
+        <div class="row bg-primary-light display-f min-vh-2 pl-2 pr-2 pt-1  br-b-sm"> 
+            <div class="col-xs-4 bg-white border-sm-secondary p-1">1 of 3</div>
+            <div class="col-xs-4 bg-white border-sm-secondary p-1 ">2 of 3</div>
+            <div class="col-xs-4 bg-white border-sm-secondary p-1">3 of 3</div>
+            <div class="col-xs-12 pt-2 pb-1">
+                <pre>
+                    <code class="bg-white border-gray ">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row display-f&quot;&gt; 
+        &lt;div class=&quot;col-xs-4&quot;&gt;
+            1 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-4&quot;&gt;
+            2 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-4&quot;&gt;
+            3 of 3
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                   </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Example 2-->
+        <div class="row bg-primary-light br-t-sm mt-2 p-1 ">
+            <h4 class="ml-1 mr-1">Example #2</h4> 
+            <p class="ml-1 mr-1">Columns with different widths.</p>
+        </div>
+        <div class="row bg-primary-light display-f pl-2 pr-2 pt-1 br-b-sm"> 
+            <div class="col-xs-3 bg-white border-sm-secondary p-1">1 of 3</div>
+            <div class="col-xs-6 bg-white border-sm-secondary p-1 ">2 of 3</div>
+            <div class="col-xs-3 bg-white border-sm-secondary p-1">3 of 3</div>
+        </div>  
+        <div class="row bg-primary-light display-f pl-2 pr-2 pt-1 br-b-sm"> 
+            <div class="col-xs-3 bg-white border-sm-secondary p-1 mt-1">1 of 3</div>
+            <div class="col-xs-4 bg-white border-sm-secondary p-1 mt-1">2 of 3</div>
+            <div class="col-xs-5 bg-white border-sm-secondary p-1 mt-1 ">3 of 3</div>
+            <div class="col-xs-12 pt-2 pb-1">
+                <pre>
+                    <code class="bg-white border-gray ">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row display-f&quot;&gt; 
+        &lt;div class=&quot;col-xs-3&quot;&gt;
+            1 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-6&quot;&gt;
+            2 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-3&quot;&gt;
+            3 of 3
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row display-f&quot;&gt; 
+        &lt;div class=&quot;col-xs-3&quot;&gt;
+            1 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-4&quot;&gt;
+            2 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-5&quot;&gt;
+            3 of 3
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                   </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Example 3-->
+        <div class="row bg-primary-light br-t-sm mt-2 p-1 ">
+            <h4 class="ml-1 mr-1">Example #3</h4> 
+            <p class="ml-1 mr-1">Collapsible Columns. Div elements with multiple column classes will collapse/change size to fit the given breakpoint.</p>
+        </div>
+        <div class="row bg-primary-light display-f pl-2 pr-2 pt-1 "> 
+            <div class="col-xs-6 col-sm-4 bg-white border-sm-secondary p-1 mt-1">1 of 3</div>
+            <div class="col-xs-6 col-sm-4 bg-white border-sm-secondary p-1 mt-1 ">2 of 3</div>
+            <div class="col-xs-12 col-sm-4 bg-white border-sm-secondary p-1 mt-1">3 of 3</div>
+        </div>  
+        <div class="row bg-primary-light display-f pl-2 pr-2 pt-2 br-b-sm "> 
+            <div class="col-xs-12 col-sm-6 col-md-3 bg-white border-sm-secondary p-1 mt-1">1 of 4</div>
+            <div class="col-xs-12 col-sm-6 col-md-3 bg-white border-sm-secondary p-1 mt-1">2 of 4</div>
+            <div class="col-xs-12 col-sm-6 col-md-3 bg-white border-sm-secondary p-1 mt-1">3 of 4</div>
+            <div class="col-xs-12 col-sm-6 col-md-3 bg-white border-sm-secondary p-1 mt-1">4 of 4</div>
+            
+            <div class="col-xs-12 pt-2 pb-1">
+                        <pre>
+                            <code class="bg-white border-gray ">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row display-f&quot;&gt; 
+        &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;
+            1 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;
+            2 of 3
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-4&quot;&gt;
+            3 of 3
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row display-f&quot;&gt; 
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+            1 of 4
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+            2 of 4
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+            3 of 4
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+            4 of 4
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                           </code>
+                        </pre>
+                    </div>
+        </div>
+
+        <!--Example 4-->
+        <div class="row bg-primary-light br-t-sm mt-2 p-1 ">
+            <h4 class="ml-1 mr-1">Example #4</h4> 
+            <p class="ml-1 mr-1">To nest your content with the default grid, add a new <code>row</code> and set of .col-* columns within an existing .col-* column. Nested rows should include a set of columns that add up to 12 or fewer.</p>
+        </div>
+        <div class="row bg-primary-light display-f pl-2 pr-2 pt-1 pb-1 br-b-sm"> 
+            <div class="col-xs-12 col-md-6 bg-white border-sm-secondary p-1">
+               col #1
+                <div class="row display-f">
+                    <div class="col-xs-6 bg-white border-sm-secondary p-1 mt-1">col #1-1</div>
+                    <div class="col-xs-6 bg-white border-sm-secondary p-1 mt-1">col #1-2</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 bg-white border-sm-secondary p-1">
+                col #2
+                <div class="row display-f">
+                    <div class="col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-1</div>
+                    <div class="col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-2</div>
+                    <div class="col-xs-4 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-3</div>
+                    <div class="col-xs-6 col-md-3 bg-white border-sm-secondary p-1 mt-1">col #2-4</div>
+                    <div class="col-xs-6 col-md-12 bg-white border-sm-secondary p-1 mt-1">col #2-5</div>
+                </div>
+            </div>
+             
+          
+            <div class="col-xs-12 mt-2">
+                <pre>
+                    <code class="bg-white border-gray ">
+&lt;div class = &quot;container&quot;&gt;
+    &lt;div class=&quot;row display-f&quot;&gt; 
+        &lt;div class=&quot;col-xs-12 col-md-6&quot;&gt;
+            col #1
+            &lt;div class=&quot;row display-f&quot;&gt;
+                &lt;div class=&quot;col-xs-6&quot;&gt;col #1-1&lt;/div&gt;
+                &lt;div class=&quot;col-xs-6&quot;&gt;col #1-2&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-md-6&quot;&gt;
+            col #2
+            &lt;div class=&quot;row display-f&quot;&gt;
+                &lt;div class=&quot;col-xs-4 col-md-3&quot;&gt;col #2-1&lt;/div&gt;
+                &lt;div class=&quot;col-xs-4 col-md-3&quot;&gt;col #2-2&lt;/div&gt;
+                &lt;div class=&quot;col-xs-4 col-md-3&quot;&gt;col #2-3&lt;/div&gt;
+                &lt;div class=&quot;col-xs-6 col-md-3&quot;&gt;col #2-4&lt;/div&gt;
+                &lt;div class=&quot;col-xs-6 col-md-12&quot;&gt;col #2-5&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+ 
+    </div>
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

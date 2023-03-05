@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/Glyphter.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Dropdowns</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+    
+    <div class="container mt-2">
+        <h2>Dropdowns</h2>
+        <p>Dropdowns are toggleable, contextual overlays for displaying lists of links and more.</p>
+        <hr class="mt-1">
+    </div> 
+
+    <div class="container min-vh-3 ">
+        <div class="row bg-primary-light mt-2 pl-1 pt-1 br-t-sm pr-1">  
+            <h4 class="ml-1 mr-1">Create a Dropdown</h4> 
+            <p class="ml-1 mr-1">Use a <code>button</code> or an <code>a</code> tag to create a drop down menu.</p>
+        </div>     
+        <div class="row display-f bg-primary-light p-2 br-b-sm pb-2">  
+            
+            <div class="dropdown mr-1 mt-1">
+                <a href='#' class="dropbtn btn-blue text-white">Dropdown</a>
+                <div class="dropdown-menu border-sm-secondary bg-white">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown mt-1">
+                <button class="dropbtn btn-secondary text-white">Dropdown</button>
+                <div class="dropdown-menu border-sm-secondary bg-white">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-12 mt-1">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a href='#' class=&quot;dropbtn btn-blue text-white&quot;&gt;Dropdown&lt;/a&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;dropbtn btn-secondary text-white&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>   
+
+
+            <div class="col-xs-12 mt-1">
+                <h5>The following JavaScript code snippet is required for the dropdown menus to work.</h5>
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;script&gt;
+    const dropdownClass = document.getElementsByClassName('dropdown-menu') 
+    const dropdownQuery = document.querySelectorAll('.dropdown-menu')
+    
+    document.addEventListener('click', e => {
+    
+        if (e.target.closest('.dropdown') === null) {
+            for(let i = 0; i< dropdownClass.length; i++){
+            dropdownClass[i].classList.remove('dropdown-show')
+            }
+        }
+    
+        if (e.target.matches('button.dropbtn, button.dropbtn i, a.dropbtn, a.dropbtn i')) {
+            e.target.closest('.dropdown').querySelector('.dropdown-menu').classList.toggle('dropdown-show')
+        }
+    
+        dropdownQuery.forEach( el => {
+            if (e.target.matches('button.dropbtn, button.dropbtn i, a.dropbtn, a.dropbtn i')) {
+                if (el !== e.target.closest('.dropdown').querySelector('.dropdown-menu')) {
+                    el.classList.remove('dropdown-show')
+                }
+            }   
+        });
+    
+    })
+&lt;/script&gt;
+               </code>
+               </pre>
+            </div>  
+
+        </div>
+    </div>    
+
+    <div class="container min-vh-3">
+        <div class="row bg-primary-light mt-2 pl-1 pt-1 br-t-sm pr-1">  
+            <h4 class="ml-1 mr-1">Dropdown Buttons</h4> 
+            <p class="ml-1 mr-1">Any of the <code>button</code> classes can be used to create a drop down menu. Bellow are a few examples</p>
+        </div>     
+        <div class="row display-f bg-primary-light p-2 br-b-sm pb-2">  
+            
+            <div class="col-xs-12 display-f">
+                <div class="dropdown mt-1 mr-1">
+                    <a href='#' class="dropbtn btn-info btn-sm  text-white">Dropdown</a>
+                    <div class="dropdown-menu border-sm-secondary bg-white br-sm">
+                        <ul>
+                            <li><a href="#">Item #1</a></li>
+                            <li><a href="#">Item #2</a></li>
+                            <li><a href="#">Item #3</a></li>
+                            <li><a href="#">Item #4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown mt-1">
+                    <button class="dropbtn btn-outlined-info btn-sm text-hover-white">Dropdown</button>
+                    <div class="dropdown-menu border-sm-secondary bg-white br-sm">
+                        <ul>
+                            <li><a href="#">Item #1</a></li>
+                            <li><a href="#">Item #2</a></li>
+                            <li><a href="#">Item #3</a></li>
+                            <li><a href="#">Item #4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 display-f">
+                <div class="dropdown mt-1 mr-1">
+                    <a href='#' class="dropbtn btn-blue text-white">Dropdown</a>
+                    <div class="dropdown-menu border-sm-secondary bg-white br-sm">
+                        <ul>
+                            <li><a href="#">Item #1</a></li>
+                            <li><a href="#">Item #2</a></li>
+                            <li><a href="#">Item #3</a></li>
+                            <li><a href="#">Item #4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown  mt-1">
+                    <button class="dropbtn btn-outlined-blue text-hover-white">Dropdown</button>
+                    <div class="dropdown-menu border-sm-secondary bg-white br-sm">
+                        <ul>
+                            <li><a href="#">Item #1</a></li>
+                            <li><a href="#">Item #2</a></li>
+                            <li><a href="#">Item #3</a></li>
+                            <li><a href="#">Item #4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 display-f">
+                <div class="dropdown mt-1 mr-1">
+                    <a href='#' class="dropbtn btn-secondary btn-lg text-white">Dropdown</a>
+                    <div class="dropdown-menu border-sm-secondary bg-white br-sm">
+                        <ul>
+                            <li><a href="#">Item #1</a></li>
+                            <li><a href="#">Item #2</a></li>
+                            <li><a href="#">Item #3</a></li>
+                            <li><a href="#">Item #4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown  mt-1">
+                    <button class="dropbtn btn-outlined-secondary btn-lg text-hover-white">Dropdown</button>
+                    <div class="dropdown-menu border-sm-secondary bg-white br-sm">
+                        <ul>
+                            <li><a href="#">Item #1</a></li>
+                            <li><a href="#">Item #2</a></li>
+                            <li><a href="#">Item #3</a></li>
+                            <li><a href="#">Item #4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 mt-1">
+                <pre>
+                <code class="bg-white border-gray "> 
+&lt;div class=&quot;col-xs-12 display-f&quot;&gt;
+    &lt;div class=&quot;dropdown mt-1 mr-1&quot;&gt;
+        &lt;a href='#' class=&quot;dropbtn btn-info btn-sm text-white&quot;&gt;Dropdown&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu border-sm-secondary bg-white br-sm&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dropdown mt-1&quot;&gt;
+        &lt;button class=&quot;dropbtn btn-outlined-info btn-sm text-hover-white&quot;&gt;Dropdown&lt;/button&gt;
+        &lt;div class=&quot;dropdown-menu border-sm-secondary bg-white br-sm&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-xs-12 display-f&quot;&gt;
+    &lt;div class=&quot;dropdown mt-1 mr-1&quot;&gt;
+        &lt;a href='#' class=&quot;dropbtn btn-blue text-white&quot;&gt;Dropdown&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu border-sm-secondary bg-white br-sm&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dropdown  mt-1&quot;&gt;
+        &lt;button class=&quot;dropbtn btn-outlined-blue text-hover-white&quot;&gt;Dropdown&lt;/button&gt;
+        &lt;div class=&quot;dropdown-menu border-sm-secondary bg-white br-sm&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-xs-12 display-f&quot;&gt;
+    &lt;div class=&quot;dropdown mt-1 mr-1&quot;&gt;
+        &lt;a href='#' class=&quot;dropbtn btn-secondary btn-lg text-white&quot;&gt;Dropdown&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu border-sm-secondary bg-white br-sm&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dropdown  mt-1&quot;&gt;
+        &lt;button class=&quot;dropbtn btn-outlined-secondary btn-lg text-hover-white&quot;&gt;Dropdown&lt;/button&gt;
+        &lt;div class=&quot;dropdown-menu border-sm-secondary bg-white br-sm&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>   
+ 
+
+        </div>
+    </div>
+
+    <div class="container min-vh-3 mb-5">
+        <div class="row bg-primary-light mt-2 pl-1 pt-1 br-t-sm pr-1">  
+            <h4 class="ml-1 mr-1">Customization</h4> 
+            <p class="ml-1 mr-1">Any of the predefined customization classes, like <code>text-*</code>,  <code>bg-*</code> ,<code>border</code> etc. can be used to customize the dropdown menus</p>
+        </div>     
+        <div class="row display-f bg-primary-light p-2 pb-2">  
+            
+            <div class="dropdown mt-1 mr-1 text-white">
+                <button class="dropbtn p-1 bg-info-dark border-sm-black">Dropdown</button>
+                <div class=" dropdown-menu border-sm-black bg-info-dark">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown mt-1 mr-1">
+                <button class="dropbtn pt-1 pb-1 pr-3 pl-3 bg-blue text-white br-md">Dropdown</button>
+                <div class=" dropdown-menu border-blue bg-white br-md">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown mt-1 mr-1">
+                <button class="dropbtn p-1 bg-white text-black shadow-inner-sm">Dropdown</button>
+                <div class=" dropdown-menu bg-white text-black shadow-inner-sm">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-12 mt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;div class=&quot;dropdown text-white&quot;&gt;
+    &lt;button class=&quot;dropbtn p-1 bg-info-dark border-sm-black&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu border-sm-black bg-info-dark&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;dropbtn pt-1 pb-1 pr-3 pl-3 bg-blue text-white br-md&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu border-blue bg-white br-md&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;dropbtn p-1 bg-white text-black shadow-inner-sm&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu bg-white text-black shadow-inner-sm&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>   
+
+        </div>
+
+        <div class="row bg-primary-light pl-1 pt-1 pr-1">  
+            <h4 class="ml-1 mr-1">Icons & Widths</h4> 
+            <p class="ml-1 mr-1">Use icons next to the dropdown button name to add arrows.</p>
+            <p class="ml-1 mr-1">Use <code>style: width: #;</code> to change the dropdown menu size.</p>
+        </div>     
+        <div class="row display-f bg-primary-light p-2 br-b-sm pb-2">  
+            
+            <div class="dropdown mt-1 mr-1">
+                <button class="dropbtn p-1 bg-white border-sm-black">Dropdown &#5121;</button>
+                <div class=" dropdown-menu bg-white border-sm-black" style="width: 300px;">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown mt-1 mr-1">
+                <button class="dropbtn pt-1 pb-1 pr-3 pl-3 bg-blue text-white br-md">Dropdown &#11167;</button>
+                <div class=" dropdown-menu bg-blue text-white br-md" style="width: 200px;">
+                    <ul>
+                        <li><a href="#">Item #1</a></li>
+                        <li><a href="#">Item #2</a></li>
+                        <li><a href="#">Item #3</a></li>
+                        <li><a href="#">Item #4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-12 mt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;div class=&quot;dropdow&quot;&gt;
+    &lt;button class=&quot;dropbtn bg-white border-sm-black&quot;&gt;Dropdown &amp;#5121;&lt;/button&gt;
+    &lt;div class=&quot; dropdown-menu bg-white border-sm-black&quot; style=&quot;width: 300px;&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;dropbtn bg-blue text-white br-md&quot;&gt;Dropdown &amp;#11167;&lt;/button&gt;
+    &lt;div class=&quot; dropdown-menu bg-blue text-white br-md&quot; style=&quot;width: 200px;&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item #4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+               </code>
+               </pre>
+            </div>   
+
+        </div>
+
+    </div>   
+
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

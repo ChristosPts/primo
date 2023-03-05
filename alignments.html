@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Alignments</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Alignments</h2>
+        <p class=" ">Use alignment classes to vertically and horizontally align columns.</p>
+        <hr class="mt-1">
+    </div>
+
+    <div class="container min-vh-3 mb-3">
+        <div class="row bg-primary-light mt-2 pl-1 pt-1 pr-1 br-t-sm">  
+            <h4 class="ml-1 mr-1">Vertical alignments</h4> 
+            <p class="ml-1 mr-1">The align-items and align-self properties control alignment of our flex items on the cross axis, down the columns if flex-direction is row and along the row if flex-direction is column.</p>
+         </div>   
+
+         <div class="row bg-primary-light p-2 br-b-sm pb-3">  
+            <div class="col-xs-12 p-1 bg-white">
+                <div class="row display-f min-vh-1 align-baseline">
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 p-1 bg-white mt-2">
+                <div class="row display-f min-vh-1 align-start">
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 p-1 bg-white mt-2">
+                <div class="row display-f min-vh-1 align-center">
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 p-1 bg-white mt-2">
+                <div class="row display-f min-vh-1 align-end">
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                    <div class="col-xs-4 p-1 border-sm-black bg-blue-light"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 pt-2">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;div class=&quot;row align-baseline&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row align-start&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row align-center&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row align-end&quot;&gt; ..... &lt;/div&gt;
+               </code>
+               </pre>
+            </div>
+
+
+        </div>
+
+        <!-- Self Alignment-->
+        <div class="row bg-primary-light  pl-1 pt-1 pr-1 br-t-sm">  
+            <h4 class="ml-1 mr-1">Vertical self-alignments</h4> 
+            <p class="ml-1 mr-1">Use align-self utilities on flexbox items to individually change their alignment on the cross axis.</p>
+         </div>  
+        <div class="row bg-primary-light min-vh-3 p-2  display-f ">
+            <div class="col-xs-3 p-2 align-self-baseline bg-white border-sm-black"></div>  
+            <div class="col-xs-3 p-2 align-self-start bg-white border-sm-black"></div>
+            <div class="col-xs-3 p-2 align-self-center bg-white border-sm-black"></div>
+            <div class="col-xs-3 p-2 align-self-end bg-white border-sm-black"></div>
+        </div>
+
+        <div class="row bg-primary-light p-2 br-b-sm display-fs">
+            <div class="col-xs-12">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;div class=&quot;col-* align-self-baseline&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;col-* align-self-start&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;col-* align-self-center&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;col-* align-self-end&quot;&gt; ..... &lt;/div&gt;
+               </code>
+               </pre>
+            </div>
+        </div>
+       
+    </div>    
+    
+    <div class="container mt-2 mb-5">
+        <div class="row bg-primary-light pl-1 pt-1 pr-1 br-t-sm">  
+            <h4 class="ml-1 mr-1">Horizontal alignments</h4> 
+            <p class="ml-1 mr-1">The justify property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container..</p>
+         </div>  
+
+         <div class="row bg-primary-light display-f justify-start p-2">  
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+         </div> <hr>
+
+         <div class="row bg-primary-light display-f justify-center p-2">  
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+         </div> <hr>
+         
+         <div class="row bg-primary-light display-f justify-end p-2">  
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+         </div> <hr>
+
+         <div class="row bg-primary-light display-f justify-space-between p-2">  
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+         </div> <hr>
+         
+         <div class="row bg-primary-light display-f justify-space-around p-2">  
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+         </div> <hr>
+
+         <div class="row bg-primary-light display-f justify-space-evenly p-2">  
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+            <div class="col-xs-2 p-2 bg-white border-sm-black"></div>
+         </div> 
+         
+         <div class="row bg-primary-light p-2 br-b-sm pb-2 br-b-sm">
+            <div class="col-xs-12">
+                <pre>
+                <code class="bg-white border-gray ">
+&lt;div class=&quot;row display-f justify-start&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row display-f justify-center&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row display-f justify-end&quot;&gt; ..... &lt;/div&gt;  
+&lt;div class=&quot;row display-f justify-space-between&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row display-f justify-space-around&quot;&gt; ..... &lt;/div&gt;                    
+&lt;div class=&quot;row display-f justify-space-evenly&quot;&gt; ..... &lt;/div&gt;                     
+               </code>
+            </pre>
+         </div>
+         
+    </div>
+</div>
+
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

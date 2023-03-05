@@ -1,0 +1,141 @@
+// similiar to mixins but cant use variables and
+// in the css files there wont be seperate items created
+// they will separate  with coma ','
+@import 'breakpoints.scss';
+
+// playholder rules wont compule in css file
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    
+    position: relative;
+    min-height: 4rem;
+    padding: $base-padding $base-padding * 2;
+    z-index: 1000 !important;
+    
+}
+
+%navbar-template {
+    @extend %flex-layout;
+
+    .nav-logo {
+        font-size: $font-size-lg;
+    }
+
+    .container {
+        @extend %flex-layout;
+    }
+
+    .nav-toggler{
+        opacity: 0;     
+        float: inline-end;
+
+        button {
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+        }
+
+    }   
+
+    .nav-menu {      
+        position: relative;
+        
+        .nav-items {
+            display: flex;
+            gap: 12px;
+         }
+
+         ul.nav-items li a {
+            display: block;
+            padding: 4px 2px ;
+          
+         }
+    }    
+}
+ 
+@mixin nav-menu-resize (){
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+   
+    .nav-items {
+        display:flex;
+        flex-direction: column;
+        width: 50vw;
+        margin: 24px auto;
+        opacity: 0;
+        transition: 0.2s;
+     }
+     
+     ul.nav-items li a{
+        margin: 8px auto;
+        text-align: center;
+        width: fit-content;
+     }
+}
+
+ 
+.nav-menu ul li:last-child .dropdown-menu {
+    left: auto; right: 0;
+}
+
+.navbar {
+    @extend %navbar-template;
+
+    
+    @media (min-width: 768px ){
+     .nav-menu{
+          background: none !important;
+          box-shadow: none !important;
+        }
+      }
+
+    .nav-toggler{
+        @include md-max {
+           opacity: 1;
+           font-size: $font-size-xl;
+        }
+
+    }
+
+    .nav-menu {      
+        @include md-max {
+            @include nav-menu-resize();
+            .dropdown-menu { 
+                position: relative;
+                width: 280px;
+            }
+            .search {
+                input {  width: 300px; }
+            }                  
+         }
+    }
+
+    .nav-menu.active {
+        @include md-max {
+                height: 190px;
+                top: 4rem;
+                transition: 0.4s;
+                overflow-y: auto;
+                
+             ul.nav-items{
+                transition: 0.2s;
+                font-size: $base-font-size;
+                opacity: 1;
+            }
+ 
+        }
+    }
+}
+
+ 

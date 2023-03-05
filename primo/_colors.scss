@@ -1,0 +1,81 @@
+/*Loop throug the colors of the color map*/
+/*This creates css classes like text-blue with color blue
+bg-red with background-color: red etc*/
+
+%color-transition {
+  transition: 0.1s
+}
+
+@each $key, $val in $colors {
+    .text-#{$key} {
+        @extend %color-transition;
+        color: $val;
+    }
+
+    .text-hover-#{$key}{
+        &:hover {
+            @extend %color-transition;
+            color: $val;
+        }
+    }
+
+    .bg-#{$key} {
+        background-color: $val;
+    }
+
+
+    .border-#{$key} {
+        border: $base-border-thickness solid $val;
+    }
+
+ 
+    //Conditionals (if statements)
+    // if my value isnt black or white create variations
+    @if($val != black and $val != white) {
+        // light/dark variations
+
+        @for $i from 1 through 1 {
+            //light var
+            .text-#{$key}-light {
+                @extend %color-transition;
+                color: mix(white, $val, $i * 35%);
+            }
+
+          .text-hover-#{$key}-light{
+                &:hover {
+                    @extend %color-transition;
+                    color: mix(white, $val, $i * 35%);
+                }
+            }
+
+            .bg-#{$key}-light{
+                @extend %color-transition;
+                background-color: mix(white, $val, $i * 35%);
+            }
+
+
+
+            // create dark variation 
+            .text-#{$key}-dark {
+                @extend %color-transition;
+                color: mix(black, $val, $i * 20%);
+            }
+
+           .text-hover-#{$key}-dark{
+                &:hover {
+                    @extend %color-transition;
+                    color: mix(black, $val, $i * 20%);
+                }
+            }
+
+            .bg-#{$key}-dark{
+                @extend %color-transition;
+                background-color: mix(black, $val, $i * 20%);
+            }
+        }
+    }
+}
+
+// parent selectors (nth-child, active, visited, last-child etc.)
+
+

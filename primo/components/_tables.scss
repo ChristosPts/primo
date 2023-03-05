@@ -1,0 +1,114 @@
+%table-layout{
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; 
+    table-layout: fixed;
+    
+
+      th,td {
+        padding: 8px;
+        text-align: left;
+        min-width: 26px;
+        table-layout: fixed;
+        width: 100vw;
+        
+      }
+}
+
+
+.table {
+    @extend %table-layout;
+}
+
+.table-bordered {
+    @extend %table-layout;
+  
+    tr {
+        border: 1px solid #afafaf;
+      }
+
+      th,td {
+        border: 1px solid #afafaf;
+      }
+}
+
+.table-sm{
+    @extend %table-layout;
+    min-width: 300px;
+    max-width: 576px;
+    
+  th,td {
+    padding: 4px;
+    padding-right: 18px;
+    min-width:60px;
+    max-width: 120px;
+    font-size: 14px;
+  }
+ 
+
+}
+
+@mixin table-collapsible-layout () {
+    border: 0;
+   
+    thead {
+        display: none;
+      }
+
+      th,td {
+        min-width: 200px;
+        width: 100%;
+      }
+
+      tr {
+        display: block;
+        margin-bottom: 24px;
+      }
+
+      td {
+        display: block;
+        font-size: 14px;
+        text-align: right;
+
+            &:last-child {
+                border-bottom: 0;
+            } 
+
+            &:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+      }
+}
+
+
+.table-collapsible{
+    @extend %table-layout;
+
+    @include sm-max {       
+      display:grid;
+        @include table-collapsible-layout();  
+    }
+}
+
+.table-collapsible-border{
+  @extend %table-layout;
+ 
+    @include sm-max {       
+      display:grid;
+        @include table-collapsible-layout();
+     
+        tr {
+            border-bottom: 2px solid #afafaf;
+        }
+
+        td {
+            border : 1px solid #afafaf;  
+        } 
+    }
+}
+ 

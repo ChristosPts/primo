@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Borders</title>
+</head>
+<body>
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+        <h2>Borders</h2>
+        <p class=" ">Use border classes to style border colors and radius</p>
+            <ul class="mb-1 li-group-square">
+                <li>
+                    The <code>br-*</code> classes are used to style border radius.
+                </li>
+                <li>
+                    The <code>border-*</code> classes are used to style border colors.
+                </li>
+            </ul>
+        <hr>
+    </div>
+    
+    <div class="container  mb-5">
+        <!---Border positions-------------------------------------------------------------------------------->        
+        
+        <div class="row bg-primary-light mt-2 p-1 br-t-sm ">
+            <h4 class="ml-1 mr-1">Border positions</h4> 
+            <p class="ml-1 mr-1">Use <code>border-{color}</code> to add a border or use <code> -t </code>, <code> -r </code>, <code> -b</code> or <code>-l</code>
+                to add a border only to a specific side.</p>
+        </div>
+        <div class="row display-f bg-primary-light min-vh-2 br-b-sm ">
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-t-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-r-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-b-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-l-black"></div>
+            </div>
+            <div class="col-xs-12 p-2">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;border-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-t-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-r-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-b-black&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;border-l-black&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+
+        <!---Widths------------------------------------------------------------------------------------------>
+        
+        <div class="row bg-primary-light mt-2 p-1 br-t-sm ">
+            <h4 class="ml-1 mr-1">Widths</h4> 
+            <p class="ml-1 mr-1">Use <code>lg</code> or <code>sm</code> to change border widths.</p>
+        </div>
+        <div class="row display-f bg-primary-light min-vh-2 br-b-sm">
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-lg-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-sm-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-t-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-lg-r-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-sm-l-black"></div>
+            </div>
+            <div class="col-xs-12 p-2">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;border-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-lg-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-sm-black&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;border-t-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-lg-r-black&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;border-sm-l-black&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+
+        <!----Colors-------------------------------------------------------------------------------------------->        
+        
+        <div class="row bg-primary-light mt-2 p-1 br-t-sm ">
+            <h4 class="ml-1 mr-1">Colors</h4> 
+            <p class="ml-1 mr-1">Use any of the primary color classes with <code>border-*</code>.</p>
+        </div>
+        <div class="row display-f bg-primary-light min-vh-3 br-b-sm">
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-primary"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-secondary"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-info"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-blue"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-red"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-yellow"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-t-green"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-r-orange"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-b-purple"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-l-black"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white bg-secondary border-white"></div>
+            </div>
+            <div class="col-xs-12 p-2">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;border-primary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-secondary&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-info&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-blue&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;border-red&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-yellow&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-t-green&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-r-orange&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-b-purple&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;border-l-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;border-white&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+
+        <!----Border radius------------------------------------------------------------------------------------------->
+        
+        <div class="row bg-primary-light  mt-2 p-1 br-t-sm ">
+            <h4 class="ml-1 mr-1">Border radius</h4> 
+            <p class="ml-1 mr-1">Use <code>br-*</code> with any <code>border-*</code> classes to add border radius</p>
+        </div>
+        <div class="row display-f bg-primary-light min-vh-2 br-b-sm">
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-sm"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-md"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-lg"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-full"></div>
+            </div>
+            <div class="col-xs-12 p-2">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;br-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;br-mdk&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;br-lg&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;br-full&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------->
+
+        <div class="row bg-primary-light  mt-2 p-1 br-t-sm ">
+            <h4 class="ml-1 mr-1">Positioned radius</h4> 
+            <p class="ml-1 mr-1">Use <code>br-*</code> with <code> -t </code>, <code> -r </code>, <code> -b</code> or <code>-l</code> to choose the border radius position.</p>
+        </div>
+        <div class="row display-f bg-primary-light min-vh-2 br-b-sm">
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-t-sm"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-r-md"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-b-lg"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2 mt-1 pl-2 pr-2">
+                <div class="box bg-white border-black br-l-full"></div>
+            </div>
+            <div class="col-xs-12 p-2">
+                <pre>
+                <code  class="bg-white border-gray ">
+&lt;div class=&quot;br-t-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;br-r-md&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;br-b-lg&quot;&gt;&lt;/div&gt;      
+&lt;div class=&quot;br-l-full&quot;&gt;&lt;/div&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------->
+                
+    </div>    
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

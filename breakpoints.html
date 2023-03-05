@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/primo.png"/>
+
+    <title>Breakpoints</title>
+</head>
+<body>
+   
+    <nav class="container-full" id="nav-container"></nav>
+
+    <div class="container mt-2">
+          <h2 class="">Breakpoints</h2>
+          <p class=" ">Breakpoints are pixel values defined in CSS. When a responsive website reaches those pixel values, a transformation occurs changing the layout of the website.They are often used in conjunction with containers and columns, creating an optimal user experience.</p> 
+        <hr class="mt-1">
+    </div>
+
+    <div class="container min-vh-3 mb-5">
+        <div class="row bg-primary-light mt-2 min-vh-2 p-1 br-sm">  
+            <h4 class="ml-1 mr-1">Available Breakpoints</h4>
+            <p class="ml-1 mr-1">Theres a total of six default breakpoints</p>
+
+           <div class="pr-1 pl-1 pb-2 pt-2">
+            <table class="table mt-1 bg-white p-1">
+                <thead>
+                <tr class="fw-bold border-b-secondary"> 
+                    <th>Breakpoint</th>
+                    <th>Prefix</th>
+                    <th>Dimensions</th>
+                    <th>Devices</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="border-sm-b-primary">
+                    <td> Extra Small</td>
+                    <td><code>-xs*</code></td>
+                    <td> < 576px</td>
+                    <td>Phones</td>
+                </tr>
+                <tr class="border-sm-b-primary">
+                    <td>Small</td>
+                    <td><code>-sm*</code></td>
+                    <td> ≥ 576px</td>
+                    <td>Tablets</td>
+                </tr>
+                <tr class="border-sm-b-primary">
+                    <td>Medium</td>
+                    <td><code>-md*</code></td>
+                    <td> ≥ 768px</td>
+                    <td>Laptops/Tablets</td>
+                </tr>
+                <tr class="border-sm-b-primary">
+                    <td>Large</td>
+                    <td><code>-lg*</code></td>
+                    <td> ≥ 992px</td>
+                    <td>Desktops/Laptops</td>
+                </tr>
+                <tr class="border-sm-b-primary">
+                    <td>Extra Large</td>
+                    <td><code>-xl*</code></td>
+                    <td> ≥ 1200px</td>
+                    <td>Desktops/Laptops</td>
+                </tr>
+                <tr class="border-sm-b-primary">
+                    <td>Extra Extra Large</td>
+                    <td><code>-xxl*</code></td>
+                    <td> ≥ 1400px</td>
+                    <td>Desktops</td>
+                </tr>
+                </tbody>
+                </table>   
+           </div> 
+        </div>
+    </div>    
+    <footer id="footer-container"></footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

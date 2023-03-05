@@ -1,0 +1,113 @@
+@use 'sass:math';
+
+.br {
+    &-sm {
+        border-radius: math.div($base-border-radius,2);
+    }
+
+    &-md {
+        border-radius: $base-border-radius;
+    }
+
+    &-lg {
+        border-radius: $base-border-radius*2;
+    }
+
+    &-full {
+        border-radius: 50%;
+    }
+}
+
+.br-t {
+    &-sm {
+        border-radius: 8px 8px 0 0;
+    }
+
+    &-md {
+        border-radius: 16px 16px 0 0;
+    }
+
+    &-lg {
+        border-radius: 32px 32px 0 0;
+    }
+
+    &-full {
+        border-radius: 50% 50% 0 0;
+    }
+}
+
+.br-b {
+    &-sm {
+        border-radius: 0 0 8px 8px;
+    }
+
+    &-md {
+        border-radius: 0 0 16px 16px;
+    }
+
+    &-lg {
+        border-radius: 0 0 32px 32px;
+    }
+
+    &-full {
+        border-radius: 0 0 50% 50%;
+    }
+}
+
+.br-r {
+    &-sm {
+        border-radius: 0 8px 8px 0;
+    }
+
+    &-md {
+        border-radius: 0 16px 16px 0;
+    }
+
+    &-lg {
+        border-radius: 0 32px 32px 0;
+    }
+
+    &-full {
+        border-radius: 0 50% 50% 0;
+    }
+}
+
+.br-l {
+    &-sm {
+        border-radius: 8px 0 0 8px;
+    }
+
+    &-md {
+        border-radius: 16px 0 0 16px;
+    }
+
+    &-lg {
+        border-radius: 32px 0 0 32px;
+    }
+
+    &-full {
+        border-radius: 50% 0 0 50%;
+    }
+}
+
+@each $key, $val in $colors {
+    .border{
+        &-sm-#{$key}{ border: $base-border-thickness*0.5 solid $val;  }
+        &-sm-b-#{$key} { border-bottom: $base-border-thickness*0.5 solid $val; }   
+        &-sm-t-#{$key} { border-top: $base-border-thickness*0.5 solid $val; }
+        &-sm-l-#{$key} { border-left: $base-border-thickness*0.5 solid $val; }
+        &-sm-r-#{$key} { border-right: $base-border-thickness*0.5 solid $val; }
+            
+        &-#{$key}{ border: $base-border-thickness solid $val;  }
+        &-b-#{$key} { border-bottom: $base-border-thickness solid $val; }   
+        &-t-#{$key} { border-top: $base-border-thickness solid $val; }
+        &-l-#{$key} { border-left: $base-border-thickness solid $val; }
+        &-r-#{$key} { border-right: $base-border-thickness solid $val; }
+        
+        &-lg-#{$key}{ border: $base-border-thickness*2 solid $val;  }
+        &-lg-b-#{$key} { border-bottom: $base-border-thickness*2 solid $val; }   
+        &-lg-t-#{$key} { border-top: $base-border-thickness*2 solid $val; }
+        &-lg-l-#{$key} { border-left: $base-border-thickness*2 solid $val; }
+        &-lg-r-#{$key} { border-right: $base-border-thickness*2 solid $val; }
+    }
+}

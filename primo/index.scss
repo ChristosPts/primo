@@ -1,0 +1,29 @@
+/*Partials - split css to multiple files*/ 
+// 1rem = 16px
+/*Order of imports is important*/
+
+// 1) varibales & functions 
+@import 'variables.scss';
+
+// 2) reset & layout 
+@import 'reset.scss';
+@import 'breakpoints.scss';
+@import 'grid.scss';
+
+// 3) colors
+@import 'colors.scss';
+
+// 4) utilities (margins,paddings,opacity) 
+@import 'utilities.scss';
+
+// 5) components (buttons, cards, navbars) 
+@import 'components/card.scss';
+@import 'components/button.scss';
+@import 'components/navbar.scss';
+@import 'components/accordion.scss';
+@import 'components/tables.scss';
+@import 'components/lists.scss';
+@import 'components/borders.scss';
+@import 'components/images.scss';
+@import 'components/dropdown.scss';
+@import 'components/modal.scss';

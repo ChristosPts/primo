@@ -1,0 +1,63 @@
+@use "sass:math";
+ 
+ %btn-layout {
+    text-decoration: none;
+    display: inline-block;
+    padding: $base-padding $base-padding * 2;
+    border-radius:  math.div($base-border-radius,1.8);
+    height: 3rem;
+ 
+    font-size: $base-font-size;
+}
+
+ .btn {
+    @extend %btn-layout;
+ }
+
+ .btn-lg {
+    @extend %btn-layout;
+    height: 3.8rem;
+    font-size: $font-size-lg;
+    line-height: 2.1rem;
+ }
+
+ 
+ .btn-sm{
+    @extend %btn-layout;
+    height: 2rem;
+    font-size: $font-size-sm;
+    line-height:  .5rem;
+ }
+
+
+ @each $key, $val in $colors {
+    .btn-#{$key} {
+        @extend  %btn-layout;
+        border: 0;
+        background-color: $val;
+     
+        &:hover {
+            background-color: darken($val, 5%);
+        }
+
+    }
+
+    .btn-outlined-#{$key} {
+        @extend  %btn-layout;
+        border: $base-border-thickness solid $val;
+        background-color: white;
+       
+        @if($val == white) {
+            &:hover {
+                background-color:  darken($val, 15%);
+            }
+        } @else {
+            &:hover {
+                background-color:  $val;
+            }
+        }
+       
+    }
+    
+  
+}  
