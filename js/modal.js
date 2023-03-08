@@ -26,12 +26,3 @@ getModal.forEach(close =>{
     };
  
 });
-
-/*
-getModal.forEach(close =>{
-    close.onclick = (e) =>{
-        if(e.target.id == "modal"){
-            close.style.display = 'none';  
-        }
-    };
-});  */
