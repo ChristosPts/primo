@@ -4,7 +4,7 @@ const footer = `
     <div class="row display-f pt-1">
         <div class="col-xs-6 col-sm-6 col-md-3 p-2">
             <div class="fw-bold"> <a href="index.html" class = "text-hover-info-dark">Primo</a></div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas mollitia quos quasi provident alias reprehenderit suscipit!</p>
+            <p>The Primo library transforms the way you create your websites. Use it to customize the look and feel of your site, set up amazing interfaces, and get inspired with new ways to create your sites. </p>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-3 p-2">
             <ul>
